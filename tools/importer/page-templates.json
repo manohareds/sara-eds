@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "ai-services-page",
+      "urls": [
+        "https://www.ey.com/en_in/services/ai"
+      ],
+      "description": "EY AI services landing page with hero, service offerings, insights, and call-to-action sections",
+      "blocks": [
+        {
+          "name": "hero-featured",
+          "instances": [
+            ".cmp-hero.hero-featured"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".up-content-grid"
+          ]
+        },
+        {
+          "name": "columns-promo",
+          "instances": [
+            ".cmp-container--theme-light-grey .up-promotional-banner--promo-side-by-side"
+          ]
+        },
+        {
+          "name": "cards-service",
+          "instances": [
+            ".cmp-link-area--regular"
+          ]
+        },
+        {
+          "name": "carousel-team",
+          "instances": [
+            ".upCarousel .up-carousel"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-2",
+          "name": "AI Insights Hero Text",
+          "selector": ".rich-text.aem-GridColumn--default--7",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [
+            "h1",
+            "h1 + p"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Featured Thinking",
+          "selector": ".hero-v2",
+          "style": null,
+          "blocks": [
+            "hero-featured"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Our Latest Thinking",
+          "selector": ".up-content-grid",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "AI Case Studies and Use Cases",
+          "selector": ".cmp-container--theme-light-grey",
+          "style": "grey",
+          "blocks": [
+            "columns-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "How EY Can Help",
+          "selector": ".link-area",
+          "style": null,
+          "blocks": [
+            "cards-service"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "The Team",
+          "selector": ".cmp-container--theme-dark",
+          "style": "dark",
+          "blocks": [
+            "carousel-team"
+          ],
+          "defaultContent": [
+            "h3"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Navigate Your AI Journey CTA",
+          "selector": ".cmp-container--theme-dark-accented",
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [
+            "p.up-promotional-banner__content-heading",
+            ".up-promotional-banner__content-description",
+            ".up-button"
+          ]
+        }
+      ]
+    }
+  ]
+}

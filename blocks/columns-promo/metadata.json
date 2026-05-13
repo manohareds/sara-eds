@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-13T06:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in/services/ai",
+    "originPage": "AI Insights hub page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "spacious",
+    "purpose": "promo",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + description + CTA button per column",
+    "buttonCount": 2,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "side-by-side promotional banners",
+      "dual CTA sections",
+      "category navigation with descriptions",
+      "two-column text with buttons"
+    ],
+    "notSuitableFor": [
+      "image-heavy side-by-side content",
+      "comparison tables",
+      "three or more column layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in/services/ai"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-13T06:21:00.000Z"
+  }
+}

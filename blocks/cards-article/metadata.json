@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-13T06:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in/services/ai",
+    "originPage": "AI Insights hub page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article-listing",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title link + description + date + author",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "article listing pages",
+      "blog post grids",
+      "insight card collections",
+      "podcast listing pages"
+    ],
+    "notSuitableFor": [
+      "product cards with pricing",
+      "team member cards",
+      "feature highlight cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in/services/ai"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-13T06:21:00.000Z"
+  }
+}
