@@ -1,0 +1,35 @@
+:root {
+  /* EY Brand Colors */
+  --ey-dark: #2e2e38;
+  --ey-yellow: #ffe600;
+  --ey-grey: #f5f5f5;
+  --ey-white: #fff;
+  --ey-text: #2e2e38;
+  --ey-text-light: #747480;
+  --ey-link: #2e2e38;
+  --ey-link-hover: #000;
+  --ey-border: #e0e0e0;
+
+  /* EY Typography - EYInterstate is proprietary, fallback to system */
+  --heading-font-family: "EYInterstate", "Noto Sans", sans-serif;
+  --body-font-family: "EYInterstate", "Noto Sans", sans-serif;
+
+  /* Heading sizes */
+  --heading-size-xxl: 40px;
+  --heading-size-xl: 28px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+
+  /* Spacing */
+  --section-padding: 48px 0;
+  --content-max-width: 1200px;
+  --nav-height: 64px;
+
+  /* Map to EDS variables */
+  --background-color: var(--ey-white);
+  --text-color: var(--ey-text);
+  --link-color: var(--ey-link);
+  --link-hover-color: var(--ey-link-hover);
+}

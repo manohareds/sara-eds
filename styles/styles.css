@@ -1,3 +1,5 @@
+@import url('brand.css');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -646,4 +648,67 @@ body.columns main > .section:empty {
 */
 main[hidden] {
   display: none !important;
+}
+
+/* EY Section Variants */
+main .section.dark {
+  background-color: var(--ey-dark);
+  color: var(--ey-white);
+  padding: 48px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: var(--ey-yellow);
+}
+
+main .section.dark p {
+  color: var(--ey-white);
+}
+
+main .section.dark a:not(.button) {
+  color: var(--ey-yellow);
+}
+
+main .section.grey {
+  background-color: var(--ey-grey);
+  padding: 48px 0;
+}
+
+/* EY Button Reset for migrated pages */
+main .button-container {
+  display: inline;
+}
+
+main a.button.primary:any-link {
+  background-color: var(--ey-yellow);
+  border-color: var(--ey-yellow);
+  color: var(--ey-dark);
+  font-weight: 700;
+  border-radius: 0;
+}
+
+main a.button.primary:hover {
+  background-color: #e6cf00;
+  border-color: #e6cf00;
+}
+
+main a.button.secondary:any-link {
+  border: 2px solid var(--ey-dark);
+  color: var(--ey-dark);
+  border-radius: 0;
+}
+
+main .section.dark a.button.secondary:any-link {
+  border-color: var(--ey-yellow);
+  color: var(--ey-yellow);
+}
+
+main .section.dark a.button.primary:any-link {
+  background-color: var(--ey-yellow);
+  color: var(--ey-dark);
 }

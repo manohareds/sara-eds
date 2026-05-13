@@ -3,25 +3,71 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .cards-service > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border-bottom: 1px solid var(--ey-border);
+  padding: 24px 0;
 }
 
-.cards-service .cards-service-card-body {
-  margin: 16px;
+.cards-service > ul > li:first-child {
+  padding-top: 0;
 }
 
-.cards-service .cards-service-card-image {
-  line-height: 0;
+.cards-service .cards-service-card-body h3,
+.cards-service .cards-service-card-body p strong {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--ey-text);
 }
 
-.cards-service > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards-service .cards-service-card-body h3 a,
+.cards-service .cards-service-card-body p strong a {
+  color: var(--ey-text);
+  text-decoration: none;
+}
+
+.cards-service .cards-service-card-body h3 a:hover,
+.cards-service .cards-service-card-body p strong a:hover {
+  text-decoration: underline;
+}
+
+.cards-service .cards-service-card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ey-text-light);
+  margin: 0 0 12px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-service .cards-service-card-body a:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ey-text);
+  text-decoration: none;
+}
+
+.cards-service .cards-service-card-body a:last-child:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .cards-service > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 32px;
+  }
+
+  .cards-service > ul > li {
+    border-bottom: 1px solid var(--ey-border);
+  }
+}
+
+@media (min-width: 900px) {
+  .cards-service > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 40px;
+  }
 }
