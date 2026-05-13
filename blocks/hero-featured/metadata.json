@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-featured",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-13T06:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in/services/ai",
+    "originPage": "AI Insights hub page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "featured-thinking",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "label + linked heading + author + date + side image",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured article banners",
+      "insight highlight sections",
+      "thought leadership hero areas"
+    ],
+    "notSuitableFor": [
+      "product landing pages",
+      "simple text heroes without images",
+      "form-based CTAs"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in/services/ai"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-13T06:21:00.000Z"
+  }
+}

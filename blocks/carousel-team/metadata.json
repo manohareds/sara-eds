@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-team",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-13T06:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in/services/ai",
+    "originPage": "AI Insights hub page",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "team",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "headshot image + name link + job title",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "team member showcases",
+      "leadership profiles",
+      "expert carousel sections",
+      "people directory carousels"
+    ],
+    "notSuitableFor": [
+      "product image carousels",
+      "testimonial sliders",
+      "full-width banner carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in/services/ai"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-13T06:21:00.000Z"
+  }
+}

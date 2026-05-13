@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-service",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-13T06:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in/services/ai",
+    "originPage": "AI Insights hub page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "service-listing",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title link + description + read more link",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service listing sections",
+      "capability overviews",
+      "solution directories without images",
+      "link list grids with descriptions"
+    ],
+    "notSuitableFor": [
+      "image-heavy card grids",
+      "product showcases",
+      "team member listings"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in/services/ai"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-13T06:21:00.000Z"
+  }
+}
