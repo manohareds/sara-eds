@@ -1,0 +1,40 @@
+.testimonial .testimonial-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.testimonial .testimonial-icon {
+  display: block;
+  font-size: 48px;
+  color: #f59e0b;
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.testimonial .testimonial-quote p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0 0 24px;
+}
+
+.testimonial .testimonial-meta p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.testimonial .testimonial-meta p strong {
+  font-size: 16px;
+  color: #0c0c0d;
+}
+
+.testimonial .testimonial-meta p em {
+  color: #f59e0b;
+  font-style: normal;
+}
