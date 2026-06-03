@@ -1,0 +1,7 @@
+{
+  "type": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "previewOrg": "manohareds",
+  "previewSite": "sara-eds",
+  "contentHostUrl": "https://content.da.live/manohareds/sara-eds/"
+}

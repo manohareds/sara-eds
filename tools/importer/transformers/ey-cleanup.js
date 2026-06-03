@@ -2,9 +2,9 @@
 /* global WebImporter */
 
 /**
- * Transformer: EY site cleanup.
- * Removes non-authorable content from EY pages.
- * All selectors from captured DOM (migration-work/cleaned.html).
+ * Transformer: EY site-wide cleanup.
+ * Removes non-authorable content from EY pages (header, footer, nav, cookie consent, search, login widgets).
+ * All selectors validated against captured DOM (migration-work/cleaned.html) of https://www.ey.com/en_in.
  */
 const TransformHook = { beforeTransform: 'beforeTransform', afterTransform: 'afterTransform' };
 

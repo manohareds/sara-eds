@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-press",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-03T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in",
+    "originPage": "EY India homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "press-release",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title link + description + date + location/author",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "press release listing sections",
+      "newsroom featured articles",
+      "media coverage cards",
+      "announcement grids on dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "light background article listings",
+      "service feature cards",
+      "team member cards",
+      "product cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-03T05:40:00.000Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-trending",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-03T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in",
+    "originPage": "EY India homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "trending-content",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "trending content sections",
+      "featured article cards on dark backgrounds",
+      "highlighted content grids",
+      "podcast episode cards"
+    ],
+    "notSuitableFor": [
+      "light background article grids",
+      "service listing cards without images",
+      "team member cards",
+      "pricing cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-03T05:40:00.000Z"
+  }
+}

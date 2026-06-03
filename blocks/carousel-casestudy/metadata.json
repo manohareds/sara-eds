@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-casestudy",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-06-03T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in",
+    "originPage": "EY India homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "case-study",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + pre-title category + title + description + CTA link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "case study showcase carousels",
+      "client success story sliders",
+      "project highlight carousels",
+      "featured work carousels"
+    ],
+    "notSuitableFor": [
+      "team member carousels",
+      "full-width hero banner carousels",
+      "image-only galleries",
+      "testimonial sliders"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-03T05:40:00.000Z"
+  }
+}

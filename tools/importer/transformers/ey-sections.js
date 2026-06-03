@@ -28,8 +28,14 @@ export default function transform(hookName, element, payload) {
       const section = sections[i];
       if (!section.selector) continue;
 
-      // Find the first element matching this section's selector
-      const sectionEl = element.querySelector(section.selector);
+      // Handle both string and array selectors
+      // Array selectors (e.g. section-6 homepage) try each selector until one matches
+      const selectors = Array.isArray(section.selector) ? section.selector : [section.selector];
+      let sectionEl = null;
+      for (const sel of selectors) {
+        sectionEl = element.querySelector(sel);
+        if (sectionEl) break;
+      }
       if (!sectionEl) continue;
 
       // Add Section Metadata block if section has a style
