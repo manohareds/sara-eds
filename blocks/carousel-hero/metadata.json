@@ -1,0 +1,41 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-06-03T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.ey.com/en_in",
+    "originPage": "EY India homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + eyebrow text + linked title + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero carousels",
+      "full-width banner slideshows",
+      "featured article rotation",
+      "landing page hero sections"
+    ],
+    "notSuitableFor": [
+      "team member carousels",
+      "product image galleries",
+      "testimonial sliders",
+      "small inline carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/en-in"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-03T05:40:00.000Z"
+  }
+}

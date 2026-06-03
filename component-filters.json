@@ -54,9 +54,33 @@
     ]
   },
   {
+    "id": "cards-press",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-trending",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel-casestudy",
+    "components": [
+      "carousel-casestudy-item"
+    ]
+  },
+  {
+    "id": "carousel-hero",
+    "components": [
+      "carousel-hero-item"
     ]
   },
   {

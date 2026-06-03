@@ -2,79 +2,76 @@
 /* global WebImporter */
 
 /**
- * Parser for cards-article variant.
+ * Parser: cards-article
  * Base block: cards
  * Source: https://www.ey.com/en_in/services/ai
  * Selector: .up-content-grid
- * Generated: 2026-05-12
+ * Generated: 2026-06-03
  *
- * Extracts article cards from an EY content grid.
- * Each card has: image, linked title, description, date, and author/duration metadata.
- * Target table: 2 columns per row — image | title + description + metadata.
+ * Container block: each article card becomes one row with 2 columns (image | text).
+ * UE model fields per card: image (reference), imageAlt (collapsed), text (richtext).
  */
 export default function parse(element, { document }) {
-  // Find all card items within the content grid list
+  // Extract all card items from the content grid
   const cardItems = element.querySelectorAll('.up-content-grid__list-item');
-
   const cells = [];
 
-  cardItems.forEach((card) => {
-    // Column 1: Card image
-    const image = card.querySelector('img.up-content-grid__list-item-image');
+  cardItems.forEach((item) => {
+    // Skip pagination or non-article items
+    if (item.classList.contains('up-content-grid__pagination')) return;
 
-    // Column 2: Content — title, description, metadata
-    const contentElements = [];
+    // --- Column 1: Image ---
+    const image = item.querySelector('.up-content-grid__list-item-image');
 
-    // Title as a bold link (matches library example: **[Article Title](link)**)
-    const titleLink = card.querySelector('a.up-content-grid__list-item-title-link');
+    const imageCell = document.createDocumentFragment();
+    imageCell.appendChild(document.createComment(' field:image '));
+    if (image) {
+      // Clone image to preserve src and alt (alt is the collapsed imageAlt field)
+      const img = image.cloneNode(true);
+      imageCell.appendChild(img);
+    }
+
+    // --- Column 2: Text (richtext) ---
+    const titleLink = item.querySelector('.up-content-grid__list-item-title-link');
+    const description = item.querySelector('.up-content-grid__list-item-description');
+    const publishDate = item.querySelector('.up-content-grid__list-item-tagline-publish-date');
+    const authorLink = item.querySelector('.up-content-grid__list-item-tagline-author-link');
+
+    const textCell = document.createDocumentFragment();
+    textCell.appendChild(document.createComment(' field:text '));
+
     if (titleLink) {
-      const strong = document.createElement('strong');
-      const link = document.createElement('a');
-      link.href = titleLink.href;
-      link.textContent = titleLink.textContent.trim();
-      strong.appendChild(link);
-      const titleP = document.createElement('p');
-      titleP.appendChild(strong);
-      contentElements.push(titleP);
+      // Create a heading-level link for the title
+      const h3 = document.createElement('h3');
+      const link = titleLink.cloneNode(true);
+      h3.appendChild(link);
+      textCell.appendChild(h3);
     }
 
-    // Description paragraph
-    const description = card.querySelector('p.up-content-grid__list-item-description');
     if (description) {
-      const descP = document.createElement('p');
-      descP.textContent = description.textContent.trim();
-      contentElements.push(descP);
+      const p = description.cloneNode(true);
+      textCell.appendChild(p);
     }
 
-    // Metadata line: date + author or duration (e.g., "29 Apr 2026 · EY India")
-    const dateEl = card.querySelector('span.up-content-grid__list-item-tagline-publish-date');
-    const authorLink = card.querySelector('a.up-content-grid__list-item-tagline-author-link');
-    const durationEl = card.querySelector('span.up-content-grid__list-item-tagline-duration');
-
-    if (dateEl || authorLink || durationEl) {
-      const metaP = document.createElement('p');
-      const parts = [];
-
-      if (dateEl) {
-        parts.push(dateEl.textContent.trim());
+    if (publishDate || authorLink) {
+      const tagline = document.createElement('p');
+      if (publishDate) {
+        const dateSpan = document.createElement('em');
+        dateSpan.textContent = publishDate.textContent.trim();
+        tagline.appendChild(dateSpan);
+      }
+      if (publishDate && authorLink) {
+        tagline.appendChild(document.createTextNode(' | '));
       }
       if (authorLink) {
-        parts.push(authorLink.textContent.trim());
-      } else if (durationEl) {
-        parts.push(durationEl.textContent.trim());
+        const author = authorLink.cloneNode(true);
+        tagline.appendChild(author);
       }
-
-      metaP.textContent = parts.join(' · ');
-      contentElements.push(metaP);
+      textCell.appendChild(tagline);
     }
 
-    // Only add a row if we have at minimum an image or content
-    if (image || contentElements.length > 0) {
-      cells.push([
-        image || '',
-        contentElements,
-      ]);
-    }
+    // Each card is one row with two columns: [image, text]
+    cells.push([imageCell, textCell]);
   });
 
   const block = WebImporter.Blocks.createBlock(document, { name: 'cards-article', cells });

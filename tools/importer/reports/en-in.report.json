@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.ey.com/en_in",
+  "path": "en-in",
+  "timestamp": "2026-06-03T05:56:31.209Z",
+  "title": "EY - India | Shape the future with confidence",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "cards-trending",
+    "cards-article",
+    "carousel-casestudy",
+    "cards-press"
+  ]
+}
